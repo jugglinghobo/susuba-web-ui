@@ -12,6 +12,11 @@ activate :livereload
 activate :sprockets
 
 ###
+# Emblem
+###
+activate :emblem
+
+###
 # Ember
 ###
 activate :ember
