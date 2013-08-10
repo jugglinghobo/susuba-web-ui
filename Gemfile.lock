@@ -20,6 +20,8 @@ GEM
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
+    ember-data-source (0.13)
+      ember-source
     ember-source (0.0.9)
       handlebars-source (= 1.0.0.rc4)
     eventmachine (1.0.3)
@@ -110,6 +112,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ember-data-source (~> 0.13)
+  ember-source (~> 0.0.9)
+  handlebars-source (~> 1.0.0.rc4)
   json (~> 1.8.0)
   middleman (~> 3.1.4)
   middleman-ember (~> 0.2.0)

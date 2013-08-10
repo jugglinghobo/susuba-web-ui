@@ -10,6 +10,10 @@ gem "sprockets-handlebars_template", :require => "sprockets/ember_handlebars_tem
 gem "middleman-ember", "~>0.2.0"
 gem "middleman-livereload", "~> 3.1.0"
 
+gem "ember-source", "~>0.0.9"
+gem "handlebars-source", "~>1.0.0.rc4"
+gem "ember-data-source", "~>0.13"
+
 gem "json", "~>1.8.0"
 
 # For faster file watcher updates on Windows:
