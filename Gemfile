@@ -2,6 +2,8 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
+gem "rack-contrib"
+
 gem "middleman", "~>3.1.4"
 gem "middleman-sprockets", "~>3.1.4"
 gem "sprockets-handlebars_template", :require => "sprockets/ember_handlebars_template"

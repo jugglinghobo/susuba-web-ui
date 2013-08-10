@@ -78,6 +78,8 @@ GEM
       sprockets-sass (~> 1.0.0)
     multi_json (1.7.8)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.2)
@@ -120,6 +122,7 @@ DEPENDENCIES
   middleman-ember (~> 0.2.0)
   middleman-livereload (~> 3.1.0)
   middleman-sprockets (~> 3.1.4)
+  rack-contrib
   ruby18_source_location
   sprockets-handlebars_template
   wdm (~> 0.1.0)
