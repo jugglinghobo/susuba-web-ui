@@ -278,7 +278,8 @@ label[for='toggle-all'] {
 	transition: color 0.4s;
 }
 #beer-list li .alc {
-  float: right;
+  position: absolute;
+  right: 30px;
 }
 
 #beer-list li .alc:after {
