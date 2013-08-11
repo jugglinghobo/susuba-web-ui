@@ -10,11 +10,13 @@
     <script type='text/x-emblem' data-template-name='beers/index'>
       ul#beer-list
         each controller itemController="beer"
-          log controller
-          li class={isEditing:editing}
+          li class={tasted:tasted isEditing:editing}
             if isEditing
               App.EditBeerView valueBinding="name"
             else
+              Ember.Checkbox class="toggle" checkedBinding="tasted"
+              #styled_select
+                App.RateBeerView valueBinding="rating"
               label doubleClick='editBeer'
                 = name
               button{action "removeBeer"} class="destroy"
