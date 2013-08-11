@@ -269,13 +269,21 @@ label[for='toggle-all'] {
 	word-break: break-word;
 	padding: 15px;
 	margin-left: 85px;
-	display: block;
+	display: inline-block;
 	line-height: 1.2;
 	-webkit-transition: color 0.4s;
 	-moz-transition: color 0.4s;
 	-ms-transition: color 0.4s;
 	-o-transition: color 0.4s;
 	transition: color 0.4s;
+}
+#beer-list li .alc {
+  float: right;
+}
+
+#beer-list li .alc:after {
+	content: '%';
+
 }
 
 #beer-list li.tasted label {
