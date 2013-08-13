@@ -10,19 +10,6 @@ App.LSAdapter = DS.LSAdapter.extend({
 App.SusubaAdapter = DS.RESTAdapter.extend({
   url : "http://localhost:3000",
   serializer: DS.JSONSerializer.extend({
-    //extract: function(loader, json, type, record) {
-    //  var root = this.rootForType(type);
-
-    //  this.sideload(loader, type, json, root);
-    //  this.extractMeta(loader, type, json);
-
-    //  if (json[root]) {
-    //    if (record) { loader.updateId(record, json[root]); }
-    //    this.extractRecordRepresentation(loader, type, json[root]);
-    //  } else {
-    //    Ember.Logger.warn("Extract requested, but no data given for " + type + ". This may cause weird problems.");
-    //  }
-    //},
 
     extractMany: function(loader, json, type, records) {
       var root = this.rootForType(type);
