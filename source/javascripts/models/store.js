@@ -10,25 +10,24 @@ App.LSAdapter = DS.LSAdapter.extend({
 App.SusubaAdapter = DS.RESTAdapter.extend({
   url : "http://localhost:3000",
   serializer: DS.JSONSerializer.extend({
-    extract: function(loader, json, type, record) {
-      var root = this.rootForType(type);
+    //extract: function(loader, json, type, record) {
+    //  var root = this.rootForType(type);
 
-      this.sideload(loader, type, json, root);
-      this.extractMeta(loader, type, json);
+    //  this.sideload(loader, type, json, root);
+    //  this.extractMeta(loader, type, json);
 
-      if (json[root]) {
-        if (record) { loader.updateId(record, json[root]); }
-        this.extractRecordRepresentation(loader, type, json[root]);
-      } else {
-        Ember.Logger.warn("Extract requested, but no data given for " + type + ". This may cause weird problems.");
-      }
-    },
+    //  if (json[root]) {
+    //    if (record) { loader.updateId(record, json[root]); }
+    //    this.extractRecordRepresentation(loader, type, json[root]);
+    //  } else {
+    //    Ember.Logger.warn("Extract requested, but no data given for " + type + ". This may cause weird problems.");
+    //  }
+    //},
 
     extractMany: function(loader, json, type, records) {
       var root = this.rootForType(type);
       root = this.pluralize(root);
-      json = this.transform(root, json);
-
+      json = this.transform_IdToId(root, json);
       if (json[root]) {
         var objects = json[root], references = [];
         if (records) { records = records.toArray(); }
@@ -43,16 +42,11 @@ App.SusubaAdapter = DS.RESTAdapter.extend({
       }
     },
 
-    transform: function(root, json) {
-      container = []
-      json.forEach(function(json_object) {
-        object = JSON.parse(json_object);
-        object.id = object._id.$oid;
+    transform_IdToId: function(root, json) {
+      json[root].forEach(function(object) {
+        object.id = object._id;
         delete object._id;
-        container.push(object);
       });
-      json = {}
-      json[root] = container;
       return json;
     }
 
