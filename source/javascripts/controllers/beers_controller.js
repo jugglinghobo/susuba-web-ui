@@ -7,7 +7,9 @@ App.BeersController = Ember.ArrayController.extend({
     // Create the new Beer model
     var beer = App.Beer.createRecord({
       name: name,
-      rating: "5"
+      alc: 4.6,
+      rating: "5",
+      tasted: false
     });
 
     // Clear the "New Beer" text field
