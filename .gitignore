@@ -18,3 +18,7 @@
 
 # Ignore tmp dir
 /tmp
+
+# Ignore rvm version and gemset
+.ruby-version
+.ruby-gemset
