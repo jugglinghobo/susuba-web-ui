@@ -28,7 +28,7 @@
       section#beers
         header#header
           h1 beers
-          Ember.TextField type="text" id="new-beer" placeholder="new beer?" valueBinding="newName" action="createBeer"
+          App.NewBeerView id="new-beer" placeholder="name" valueBinding="newName"
 
           section#main
             = outlet
@@ -73,6 +73,7 @@
 
     <script src="javascripts/models/beer.js"></script>
 
+    <script src="javascripts/views/new_beer_view.js"></script>
     <script src="javascripts/views/edit_beer_view.js"></script>
     <script src="javascripts/views/rate_beer_view.js"></script>
   </body>

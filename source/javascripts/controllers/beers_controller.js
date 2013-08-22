@@ -18,7 +18,7 @@ App.BeersController = Ember.ArrayController.extend({
     // Save the new model
     beer.save();
   },
-  
+
   remaining: function() {
     return this.filterProperty('tasted', false).get('length');
   }.property('@each.tasted'),
@@ -53,5 +53,5 @@ App.BeersController = Ember.ArrayController.extend({
     }
   }
 
-  
+
 });
