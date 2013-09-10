@@ -1,0 +1,61 @@
+$body_colour: black;
+$container_colour: white;
+$button_colour: #eee;
+$button_border_radius: 10px;
+html, body {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    background: $body_colour;
+
+    #header {
+      height: 10%;
+    }
+
+    #content {
+      position: relative;
+      background: $container_colour;
+      width: 40%;
+      min-height: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+
+      #random_beer {
+        display: table;
+        text-align: center;
+        margin: 10% auto;
+
+        #text {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          width: 50%;
+          height: 50px;
+          font-size: 2em;
+        }
+      }
+
+      #random_beer_button {
+        text-align: center;
+
+        button {
+          font-family: inherit;
+          width: 40%;
+          height: 50px;
+          background: $button_colour;
+          -webkit-border-radius: $button_border_radius;
+          -moz-border-radius: $button_border_radius;
+          border-radius: $button_border_radius;
+        }
+      }
+    }
+  }
+}
