@@ -4,6 +4,8 @@
 # or operating system, you probably want to add a global ignore instead:
 # git config --global core.excludesfile ~/.gitignore_global
 
+# orig files
+*.orig
 # Ignore bundler config
 /.bundle
 
@@ -19,6 +21,6 @@
 # Ignore tmp dir
 /tmp
 
-# Ignore rvm settings
-/.ruby-version
-/.ruby-gemset
+# Ignore rvm version and gemset
+.ruby-version
+.ruby-gemset
