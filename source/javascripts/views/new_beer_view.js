@@ -1,7 +1,8 @@
-App.NewBeerView = Ember.TextField.extend({
+App.NewBeerView = Ember.View.extend({
+
+  beerBinding: 'App.Beer',
 
   insertNewline: function () {
     this.get('controller').createBeer();
   },
-
 })

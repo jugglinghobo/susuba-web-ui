@@ -28,13 +28,17 @@
       section#beers
         header#header
           h1 beers
-          App.NewBeerView id="new-beer" placeholder="name" valueBinding="newName"
+
+          #formFor beer
+
+
+          //App.NewBeerView id="new-beer" placeholder="name" valueBinding="newName"
+          //App.NewBeerView id="new-beer"
+          //  Ember.TextField type="text" id="new-name" placeholder="name" valueBinding="newName"
+          //  Ember.TextField type="text" id="new-alc" placeholder="alc" valueBinding="newAlc"
 
           section#main
             = outlet
-
-            Ember.Checkbox id="toggle-all" checkedBinding="allAreTasted"
-
           footer#footer
             span#beer-count
               strong
