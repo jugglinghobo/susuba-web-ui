@@ -4,7 +4,7 @@ Bundler.require
 ###
 # LiveReload
 ###
-activate :livereload
+activate :livereload, :host => "127.0.0.1"
 
 ###
 # Sprockets
@@ -14,7 +14,8 @@ activate :sprockets
 ###
 # Emblem
 ###
-activate :emblem
+activate :emblem, emblem_dir: "source/js/templates"
+
 
 ###
 # Ember
@@ -71,7 +72,7 @@ activate :ember
 # end
 
 set :css_dir, "stylesheets"
-set :js_dir, "javascripts"
+set :js_dir, "js"
 set :images_dir, "images"
 set :layout, nil
 set :css_assets_paths, ["#{root}/vendor/stylesheets/"]

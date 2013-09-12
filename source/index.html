@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>susuba</title>
+    <link href="stylesheets/reset.css" rel="stylesheet"></link>
+    <link href="stylesheets/susuba.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <script type="text/x-emblem">
+      #header
+      #content
+        #random_beer
+          = outlet main
+        #random_beer_action
+          | #{linkTo "beer" | get a beer}
+      #footer
+    </script>
+
+    <script type="text/x-emblem" data-template-name="beer">
+        #text
+          = name
+    </script>
+
+
+
+
+
+
+
+    <script src="vendor/jquery-1.9.1.js"></script>
+    <script src="vendor/latest/handlebars-1.0.0.js"></script>
+    <script src="vendor/latest/emblem.js"></script>
+    <script src="vendor/latest/ember-1.0.0.js"></script>
+    <script src="vendor/latest/ember-data.js"></script>
+    <script src="vendor/local_storage_adapter.js"></script>
+
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/store.js"></script>
+
+    <script src="js/beer_controller.js"></script>
+    <script src="js/beer.js"></script>
+
+  </body>
+</html>
