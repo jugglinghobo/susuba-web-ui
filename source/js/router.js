@@ -1,12 +1,13 @@
 App.Router.map(function () {
   this.route('index', { path: '/' });
-  this.resource('beer', {path: '/random' });
+  this.resource('randomBeer', { path: '/random' });
 });
 
-App.IndexRoute = Ember.Route.extend();
-
-App.BeerRoute = Ember.Route.extend({
-  setupController: function(controller, beer) {
-    controller.set('model', beer);
+App.IndexRoute = Ember.Route.extend({
+  redirect: function() {
+    this.transitionTo("randomBeer");
   }
+});
+
+App.RandomBeerRoute = Ember.Route.extend({
 });

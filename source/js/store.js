@@ -1,8 +1,8 @@
 App.Store = DS.Store.extend({
-  adapter   : 'App.SusubaAdapter'
+  adapter: 'App.SusubaAdapter'
 });
 
-App.SusubaAdapter = DS.FixtureAdapter.extend();
+App.SusubaAdapter = DS.FixtureAdapter.create();
 
 //App.SusubaAdapter = DS.RESTAdapter.extend({
 //  bulkCommit: false,
