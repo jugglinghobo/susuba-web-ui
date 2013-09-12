@@ -46,10 +46,9 @@ html {
       #random_beer_action {
         text-align: center;
 
-        a {
+        button {
           font-family: inherit;
           width: 40%;
-          height: 20px;
           padding: 20px 40px;
           background: $button_colour;
           -webkit-border-radius: $button_border_radius;
