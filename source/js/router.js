@@ -1,6 +1,6 @@
 App.Router.map(function () {
-  this.route('index', { path: '/' });
-  this.resource('randomBeer', { path: '/random' });
+  this.resource('index', { path: '/' });
+  this.resource('randomBeer', { path: '/randomBeer' });
 });
 
 App.IndexRoute = Ember.Route.extend({

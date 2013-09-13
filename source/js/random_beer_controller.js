@@ -1,13 +1,11 @@
 App.RandomBeerController = Ember.Controller.extend({
 
-  actions: {
-    randomBeer: function() {
-      var beers = App.Beer.FIXTURES;
-      var random_index = Math.floor((Math.random()*beers.length-1)+1);
-      var beer = beers[random_index];
-      this.set('model', beer);
-      return beer;
-    },
+  randomBeer: function() {
+    var self = this, url = "http://localhost:3000/beers/random"
+    Ember.$.get(url).then(function(data) {
+      console.log(self);
+      self.set('model', data.beer);
+    });
   },
 
   name: function() {
