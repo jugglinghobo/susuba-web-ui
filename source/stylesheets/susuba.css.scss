@@ -1,4 +1,4 @@
-$body_colour: white;
+$body_colour: black;
 $container_colour: white;
 $button_colour: #eee;
 $button_border_radius: 10px;
@@ -12,49 +12,71 @@ html {
     height: 100%;
     background: $body_colour;
 
-    #header {
-      height: 50px;
-    }
-
-    #content {
-      position: relative;
-      background: $container_colour;
+    .ember-view {
       width: 40%;
-      height: 200px;
+      height: inherit;
       margin-left: auto;
       margin-right: auto;
-      padding: 5%;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
+    }
 
-      #random_beer {
-        display: table;
-        text-align: center;
-        margin: 10% auto;
-        width: 50%;
-        height: 50px;
+    #container_content {
+      height: 90%;
 
-        #text {
-          display: table-cell;
-          vertical-align: middle;
-          text-align: center;
-          font-size: 2em;
-        }
+      #header {
+        height: 30px;
       }
 
-      #random_beer_action {
-        text-align: center;
+      #content {
+        position: relative;
+        height: 90%;
+        background: $container_colour;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5%;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
 
-        button {
-          font-family: inherit;
-          font-size: 1em;
-          width: 40%;
-          padding: 20px 40px;
-          background: $button_colour;
-          -webkit-border-radius: $button_border_radius;
-          -moz-border-radius: $button_border_radius;
-          border-radius: $button_border_radius;
+        #random_beer {
+          display: table;
+          text-align: center;
+          margin: 5% auto;
+          width: 50%;
+          height: 200px;
+
+          #name {
+            display: table-row;
+            vertical-align: middle;
+            text-align: center;
+            height: 100px;
+            font-size: 2em;
+          }
+
+          #alc {
+            display: table-row;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 1.5em;
+
+            &:after {
+              content: "%";
+            }
+          }
+        }
+
+        #random_beer_action {
+          text-align: center;
+
+          button {
+            font-family: inherit;
+            font-size: 1em;
+            width: 40%;
+            padding: 20px 40px;
+            background: $button_colour;
+            -webkit-border-radius: $button_border_radius;
+            -moz-border-radius: $button_border_radius;
+            border-radius: $button_border_radius;
+          }
         }
       }
     }

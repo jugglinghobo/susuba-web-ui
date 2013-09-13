@@ -8,15 +8,18 @@
   </head>
   <body>
     <script type="text/x-emblem">
-      = outlet
+      #container_content
+        = outlet
     </script>
 
     <script type="text/x-emblem" data-template-name="randomBeer">
       #header
       #content
         #random_beer
-          #text
+          #name
             = name
+          #alc
+            = alc
         #random_beer_action
           button{action 'randomBeer'} get a beer!
       #footer
