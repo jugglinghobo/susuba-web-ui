@@ -5,9 +5,8 @@ App.Router.map(function () {
 
 App.IndexRoute = Ember.Route.extend({
   redirect: function() {
-    this.transitionTo("randomBeer");
+    this.transitionTo('randomBeer');
   }
 });
 
-App.RandomBeerRoute = Ember.Route.extend({
-});
+App.RandomBeerRoute = Ember.Route.extend({});

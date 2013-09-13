@@ -1,11 +1,15 @@
 App.RandomBeerController = Ember.Controller.extend({
 
-  randomBeer: function() {
-    var self = this, url = "http://localhost:3000/beers/random"
-    Ember.$.get(url).then(function(data) {
-      console.log(self);
-      self.set('model', data.beer);
-    });
+  actions: {
+    randomBeer: function() {
+      //var backend = "http://localhost:3000";
+      var backend = "http://susuba.herokuapp.com";
+      var url = backend+"/beers/random";
+      var self = this;
+      Ember.$.get(url).then(function(data) {
+        this.set('model', data.beer);
+      });
+    },
   },
 
   name: function() {
