@@ -7,7 +7,7 @@ App.RandomBeerController = Ember.Controller.extend({
       var url = backend+"/beers/random";
       var self = this;
       Ember.$.get(url).then(function(data) {
-        this.set('model', data.beer);
+        self.set('model', data.beer);
       });
     },
   },

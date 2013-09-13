@@ -14,7 +14,7 @@ activate :sprockets
 ###
 # Emblem
 ###
-activate :emblem, emblem_dir: "source/js/templates"
+activate :emblem
 
 
 ###
