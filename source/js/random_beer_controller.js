@@ -22,7 +22,7 @@ App.RandomBeerController = Ember.Controller.extend({
 
   alc: function() {
     if (this.get('model') !== undefined) {
-      return this.get('model').alc;
+      return this.get('model').alc + "%";
     } else {
       return "";
     }

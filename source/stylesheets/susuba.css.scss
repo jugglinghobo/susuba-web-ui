@@ -2,6 +2,7 @@ $body_colour: black;
 $container_colour: white;
 $button_colour: #eee;
 $button_border_radius: 10px;
+$border_radius: 1em;
 html, body {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
@@ -20,10 +21,10 @@ html {
     }
 
     #container_content {
-      height: 600px;
+      height: 40em;
 
       #header {
-        height: 30px;
+        height: 2em;
       }
 
       #content {
@@ -33,22 +34,22 @@ html {
         margin-left: auto;
         margin-right: auto;
         padding: 5%;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
+        -webkit-border-radius: $border_radius;
+        -moz-border-radius: $border_radius;
+        border-radius: $border_radius;
 
         #random_beer {
           display: table;
           text-align: center;
           margin: 5% auto;
           width: 50%;
-          height: 200px;
+          height: 10em;
 
           #name {
             display: table-row;
             vertical-align: middle;
             text-align: center;
-            height: 100px;
+            height: 4em;
             font-size: 2em;
           }
 
@@ -57,10 +58,6 @@ html {
             vertical-align: middle;
             text-align: center;
             font-size: 1.5em;
-
-            &:after {
-              content: "%";
-            }
           }
         }
 
@@ -71,7 +68,7 @@ html {
             font-family: inherit;
             font-size: 1em;
             width: 40%;
-            padding: 20px 40px;
+            padding: 3em 2em;
             background: $button_colour;
             -webkit-border-radius: $button_border_radius;
             -moz-border-radius: $button_border_radius;
